@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">License App</string>
+    <string name="forgot_password">This reset password screen is only for demonstration purposes.This is an insecure method of resetting a password. There is no verification process involved. This was left out due to the app being a prototype.</string>
+</resources>

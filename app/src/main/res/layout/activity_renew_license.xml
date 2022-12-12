@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RenewLicense">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnRenewLicenseBack"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:tint="@color/white"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="30dp"
+        android:background="@drawable/button_background_black" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Renew license"
+        android:fontFamily="@font/noveosans"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnRenewLicenseBack"
+        android:id="@+id/msgRenewLicense"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You will need to pay a R70 service fee at the end to the process."
+        android:fontFamily="@font/noveosans"
+        android:textColor="#E9717171"
+        android:textSize="20sp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/msgRenewLicense"
+        android:id="@+id/msgRenewLicenseDescription"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:scrollbarThumbVertical="@drawable/button_background"
+        android:fadeScrollbars="false"
+        android:scrollbars="vertical"
+        android:scrollbarSize="20dp"
+        app:layout_constraintTop_toBottomOf="@id/msgRenewLicenseDescription"
+        app:layout_constraintBottom_toTopOf="@id/btnFinishRenewLicense"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginHorizontal="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:textStyle="bold|italic"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Your profile information will be used to verify your
+                credentials in our database. "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Proof of address"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/proofofaddressfileName"
+                    android:layout_weight="1"
+                    android:text="proofofaddress.pdf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:padding="20dp"
+                    />
+                <android.widget.Button
+                    android:id="@+id/proofofaddressBtn"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_background_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="upload"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fingerprints"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/fingerprintfileName"
+                    android:layout_weight="1"
+                    android:text="fingerprints.pdf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:padding="20dp"
+                    />
+                <android.widget.Button
+                    android:id="@+id/fingerprintBtn"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_background_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="upload"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eye test"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/eyetestfileName"
+                    android:layout_weight="1"
+                    android:text="eyetest.pdf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:padding="20dp"
+                    />
+                <android.widget.Button
+                    android:id="@+id/eyetestBtn"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_background_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="upload"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID Photo"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/idphotoName"
+                    android:layout_weight="1"
+                    android:text="idphotoblackandwhite.pdf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:padding="20dp"
+                    />
+                <android.widget.Button
+                    android:id="@+id/idphotoBtn"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_background_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="upload"/>
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Make sure your photo looks like the example below"
+                android:textColor="#C62828"
+                android:textStyle="bold"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/idphotoexample"
+                />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <android.widget.Button
+        android:id="@+id/btnFinishRenewLicense"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Make Payment"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/button_background"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="50dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
